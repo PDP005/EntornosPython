@@ -2,7 +2,7 @@ ancho= int(input("ANCHO: "))
 caracter=input("SÍMBOLO: ")
 
 def triangulo(anchuramax,caracter):
-    cad=" "
+    cad=""
     anchura=0
     while anchura < anchuramax:
         anchura+=1
@@ -11,6 +11,15 @@ def triangulo(anchuramax,caracter):
         print(cad)
 
 triangulo(ancho,caracter)
+
+def terminartriangulo(anchuramax,caracter):
+    anchuramax-=1
+    for anchura in range(anchuramax, 0, -1):
+        cad = caracter * anchura 
+        print(cad)
+
+terminartriangulo(ancho,caracter)
+        
 
 """ terminar hacia abajo  """
 
