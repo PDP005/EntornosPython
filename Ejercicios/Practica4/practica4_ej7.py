@@ -9,14 +9,19 @@ maximo=-1
 
 for i in nombres:
     buscar=i
-    if i in nombresFound:
-        continue #para que no escriba otra vez el nombre 
-    nombresFound.append(i)
-    x=0
-    for j in nombres:
-        if buscar==j:
-            x+=1
-    print(buscar+": "+str(x))
+    if i not in nombresFound[1]:
+        #tupla de 2 valores paar luego ver que no salga
+        nombresFound.append(i,nombresFound.count(i))
+        
     
-    if maximo<x:
-        maximo=x
+    # else:
+                
+    # x=0
+    # for j in nombres:
+    #     if buscar==j:
+    #         x+=1
+    # print(buscar+": ",x)
+    
+    # if maximo<x:
+    #     maximo=x
+print(nombresFound)
